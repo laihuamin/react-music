@@ -1,10 +1,12 @@
 {
-  "name": "React-music",
+  "name": "react-music",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --history-api-fallback",
+    "build": "webpack -p"
   },
   "keywords": [],
   "author": "laihuamin",
