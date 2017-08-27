@@ -1,4 +1,3 @@
 # react-router
-- react-router相对于其他路由系统又针对React做了哪些优化呢？
-- 它是如何利用了React的UI状态机特性呢？
-- 又是如何将JSX这种声明式的特性用在路由中？
+> React Router 4 的每一个部分都是 React 的组件：Router, Route, Link 等等。
+[react-router](https://reacttraining.com/react-router/web/example/basic)
