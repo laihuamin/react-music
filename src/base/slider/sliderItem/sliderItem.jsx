@@ -1,0 +1,16 @@
+import React, {Component} from 'react';
+
+export default class SliderItem extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    render() {
+        let {count, width} = this.props;
+        let width = 100 / count + '%';
+        return (
+            <li className="slider-item" style={{width: width}}>
+                <img src={item.img} alt={item.alt} />
+            </li>
+        )
+    }
+}

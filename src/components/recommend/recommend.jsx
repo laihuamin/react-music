@@ -1,4 +1,5 @@
 import React, {Components} from 'react';
+import Slider from '../../base/slider/slider.jsx';
 
 
 class Recommend extends React.Component {
@@ -6,6 +7,7 @@ class Recommend extends React.Component {
         return (
             <div>
                 <p>Recommend</p>
+                <Slider />
             </div>
         )
     }
