@@ -6,7 +6,7 @@ export default class SliderItem extends React.Component {
         super(props);
     }
     render() {
-        let {count, width} = this.props;
+        let {count, item} = this.props;
         let width = 100 / count + '%';
         return (
             <li className="slider-item" style={{width: width}}>

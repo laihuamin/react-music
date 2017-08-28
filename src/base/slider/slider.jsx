@@ -63,10 +63,10 @@ class Slider extends React.Component {
 Slider.defaultProps = {
     speed: 1,
     delay: 2,
-    pause: ture,
+    pause: true,
     autoplay: true,
     dots: true,
-    arrow: thue,
+    arrow: true,
     item: []
 }
 

@@ -2,7 +2,7 @@ import jsonp from 'jsonp';
 import {commonParams, options} from '../common/js/config.js';
 
 export const getSlider = () => {
-    const url = 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_singer_track_cp.fcg',
+    const url = 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_singer_track_cp.fcg'
     const data = Object.assign({}, commonParams, {
         channel: 'singer',
         page: 'list',
