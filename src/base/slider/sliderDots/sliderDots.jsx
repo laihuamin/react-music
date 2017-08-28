@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './sliderDots.less';
 
 export default class SliderDots extends React.Component {
     constructor(props){

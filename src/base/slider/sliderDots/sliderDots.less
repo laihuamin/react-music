@@ -1,0 +1,24 @@
+.slider-dot-wrapper{
+    z-index: 99;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: .12rem;
+    font-size: 0;
+    height: .08rem;
+    .slider-dot{
+        display: inline-block;
+        width: .08rem;
+        height: .08rem;
+        border-radius: 50%;
+        margin: 0 .04rem;
+        background: hsla(0,0%,100%,.5);
+        cursor: pointer;
+        .slider-dot-selected{
+            width: .2rem;
+            border-radius: 5px;
+            background: hsla(0,0%,100%,.8);
+        }
+    }
+}

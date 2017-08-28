@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './sliderArrow.less';
 
 export default class SliderArrow extends React.Component{
     constructor(props){

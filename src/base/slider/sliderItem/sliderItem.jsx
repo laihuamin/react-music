@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './sliderItem.less';
 
 export default class SliderItem extends React.Component {
     constructor(props){
