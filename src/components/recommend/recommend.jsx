@@ -1,29 +1,30 @@
 import React, {Components} from 'react';
 import Slider from '../../base/slider/slider.jsx';
-import {getSlider} from '../../api/singer.js';
+import {getRecommendSlider} from '../../api/recommend.js';
 import {ERROR_OK} from '../../common/js/config.js';
+
 class Recommend extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            items: {}
+            items: []
         }
     }
-    ComponentDidMount(){
-        getSlider().then((res) => {
+    componentDidMount(){
+        getRecommendSlider().then((res) => {
             if(res.code === ERROR_OK){
                 const post = res.data.slider;
-                this.setState({post});
+                console.log(post);
+                this.setState({items: post});
             }
         })
     }
     render () {
         return (
             <div>
-                <p>Recommend</p>
                 <Slider 
                     autoplay={true}
-                    item={this.state.items}
+                    items={this.state.items}
                     dots={true}
                     arrow={true}
                     speed={1.2}

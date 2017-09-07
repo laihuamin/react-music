@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import SliderItem from './sliderItem/sliderItem.jsx';
 import SliderDots from './sliderDots/SliderDots.jsx';
 import SliderArrow from './sliderArrow/sliderArrow.jsx';
+import './slider.less';
 
 class Slider extends React.Component {
     constructor(props){
@@ -38,20 +39,16 @@ class Slider extends React.Component {
     }
     render(){
         let count = this.props.items.length;
-        let itemNodes = this.props.item.map((item, index) => {
+        let itemNodes = this.props.items.map((item, index) => {
             return <SliderItem item={item} count={count} key={'key' + index} />
         })
         let arrowNodes = <SliderArrow turn={this.turn.bind(this)}/>
         let dotsNodes = <SliderDots turn={this.turn.bind(this)} count={count} nowLocal={this.state.nowLocal}/>
         return (
-            <div className="slider"
+            <div className="slider-wrapper"
                 onMouseOver={this.props.pause?this.pausePlay.bind(this):null}
                 onMouseOut={this.props.pause?this.goPlay.bind(this):null}>
-                <ul style={{
-                    left: -100 * this.state.nowLocal + '%',
-                    transitionDuration: this.props.speed + 's',
-                    width: this.props.item.length * 100 + '%'
-                }}>
+                <ul className="slider">
                     {itemNodes}
                 </ul>
                 {this.props.arrow?arrowNodes:null}
