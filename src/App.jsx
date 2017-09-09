@@ -17,8 +17,8 @@ class App extends React.Component {
                         <ul className="app-tab">
                             <li className="tab-item"><Link to="/">推荐</Link></li>
                             <li className="tab-item"><Link to="/singer">歌手</Link></li>
-                            <li className="tab-item"><Link to="search">搜索</Link></li>
-                            <li className="tab-item"><Link to="rank">排行</Link></li>
+                            <li className="tab-item"><Link to="/search">搜索</Link></li>
+                            <li className="tab-item"><Link to="/rank">排行</Link></li>
                         </ul>
                         <Route exact path="/" component={Recommend} />
                         <Route path="/singer" component={Singer} />

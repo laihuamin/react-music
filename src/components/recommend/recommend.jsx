@@ -21,17 +21,15 @@ class Recommend extends React.Component {
     }
     render () {
         return (
-            <div>
-                <Slider 
-                    autoplay={true}
-                    items={this.state.items}
-                    dots={true}
-                    arrow={true}
-                    speed={1.2}
-                    delay={1.5}
-                    pause={true}
-                />
-            </div>
+            <Slider 
+                autoplay={true}
+                items={this.state.items}
+                dots={true}
+                arrow={true}
+                speed={1.2}
+                delay={1.5}
+                pause={true}
+            />
         )
     }
 }

@@ -18,7 +18,7 @@ export default class SliderDots extends React.Component {
             dotNodes[i] = (
                 <span
                     key={`dot${i}`}
-                    className={"slider-dot" + (i === this.props.nowLocal ? "slider-dot-selected" : "")}
+                    className={"slider-dot" + (i === this.props.nowLocal ? " slider-dot-selected" : " ")}
                     onClick={this.handleDotClick.bind(this, i)}></span>
             )
         };
