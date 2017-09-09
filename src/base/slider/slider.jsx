@@ -62,7 +62,8 @@ class Slider extends React.Component {
         let styleObj = {
             width: `${count}00%`,
             transform: `translate3d(-${this.state.nowLocal/count * 100}%, 0, 0)`,
-            transition: `1s`
+            overflow: 'hidden',
+            display: 'flex'
         }
         return (
             <div className="slider-wrapper"
