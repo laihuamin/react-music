@@ -4,6 +4,8 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const extractText = new ExtractTextPlugin({
     filename: 'bundle.css'
 });
+const WebpackDevServer = require('webpack-dev-server');
+require('babel-polyfill');
 
 const htmlPlugin = new HTMLWebpackPlugin({
     template: './index.html',
@@ -12,7 +14,7 @@ const htmlPlugin = new HTMLWebpackPlugin({
 });
 
 module.exports = {
-    entry: './src/index.js',
+    entry: ['babel-polyfill', './src/index.js'],
 
     output: {
         filename: 'bundle.js',
@@ -42,6 +44,21 @@ module.exports = {
                 loader: 'url-loader?limit=10000'
             }
         ]
+    },
+    WebpackDevServer: {
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
+        progress: true,
+        port: 3000,
+        host: '10.0.0.9',
+        proxy: {
+            '/recommend/*': {
+                target: 'http://localhost',
+                changeOrigin: true,
+                secure: false
+            }
+        }
     },
 
     plugins: [
