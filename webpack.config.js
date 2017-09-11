@@ -7,7 +7,7 @@ const extractText = new ExtractTextPlugin({
 });
 // const WebpackDevServer = require('webpack-dev-server');
 require('babel-polyfill');
-require('react-hot-loader');
+// require('react-hot-loader');
 
 const htmlPlugin = new HTMLWebpackPlugin({
     template: './index.html',
@@ -21,11 +21,10 @@ module.exports = {
     // sourcemap 的作用就是为调试代码提供便利
     // cheap-module-eval-source-map 绝大多数情况下都会是最好的选择，这也是下版本 webpack 的默认选项。
 
-
     entry: [
-        'react-hot-loader',
+        // 'react-hot-loader',
         //reload
-        'webpack-hot-middleware/client?reload=true',
+        // 'webpack-hot-middleware/client?reload=true',
         // 这里reload=true的意思是，如果碰到不能hot reload的情况，就整页刷新。
 
         'babel-polyfill', 

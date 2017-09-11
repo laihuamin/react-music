@@ -15,12 +15,12 @@ class App extends React.Component {
                 <Router>
                     <div>
                         <ul className="app-tab">
-                            <li className="tab-item"><Link to="/">推荐</Link></li>
+                            <li className="tab-item"><Link to="/recommend">推荐</Link></li>
                             <li className="tab-item"><Link to="/singer">歌手</Link></li>
                             <li className="tab-item"><Link to="/search">搜索</Link></li>
                             <li className="tab-item"><Link to="/rank">排行</Link></li>
                         </ul>
-                        <Route exact path="/" component={Recommend} />
+                        <Route exact path="/recommend" component={Recommend} />
                         <Route path="/singer" component={Singer} />
                         <Route path="/search" component={Search} />
                         <Route path="/rank" component={Rank} />

@@ -30,6 +30,7 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.29.0",
+    "http-proxy": "^1.16.2",
     "jsonp": "^0.2.1",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
@@ -45,5 +46,8 @@
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^2.7.1",
     "webpack-hot-middleware": "^2.19.1"
+  },
+  "devDependencies": {
+    "koa": "^2.3.0"
   }
 }

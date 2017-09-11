@@ -14,7 +14,6 @@ class Recommend extends React.Component {
         getRecommendSlider().then((res) => {
             if(res.code === ERROR_OK){
                 const post = res.data.slider;
-                console.log(post);
                 this.setState({items: post});
             }
         })
